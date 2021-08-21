@@ -49,7 +49,7 @@ h1,
 
 .wrapper {
   padding: 5rem 0;
-  width: 85%;
+  width: 90%;
   max-width: 550px;
   margin: 0 auto;
 }
@@ -112,4 +112,115 @@ header {
 .content {
   font-size: 13px;
   line-height: 1.5;
+}
+
+/* a little bit smaller phones */
+@media screen and (max-width: 350px) {
+  .title {
+    font-size: 2rem;
+  }
+  .review {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* laptobs and Desktop */
+/* a little bit smaller phones */
+@media screen and (min-width: 750px) {
+  .wrapper {
+    padding: 6rem 0;
+    max-width: 1150px;
+  }
+  header,
+  .reviews-wrapper {
+    display: flex;
+  }
+  header {
+    text-align: start;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+  .raiting-section {
+    text-align: center;
+    margin-left: auto;
+    max-width: 550px;
+    flex: 1;
+  }
+
+  .title-section {
+    flex: 1;
+    max-width: 400px;
+    padding-right: 1rem;
+  }
+  .reviews-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .review {
+    flex: 1 0;
+    max-width: 550px;
+    min-width: 300px;
+  }
+  .review.top {
+    margin-right: 1rem;
+  }
+  .content,
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  header {
+    align-items: start;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .raiting-section {
+    text-align: left;
+    justify-content: space-between;
+  }
+  .img-wrapper {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+  .rating {
+    padding: 1.25rem 2rem;
+    display: flex;
+    max-width: 450px;
+  }
+  .rating.middle {
+    margin: 1rem auto;
+  }
+  .rating.bottom {
+    margin-left: auto;
+  }
+
+  .review {
+    min-width: 260px;
+    max-width: 350px;
+  }
+
+  .review.top,
+  .review.middle {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  }
+  .review.middle {
+    transform: translateY(1.25rem);
+  }
+  .review.bottom {
+    transform: translateY(2.5rem);
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  body {
+    background: url(images/bg-pattern-top-desktop.svg) top left no-repeat,
+      url(images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+  }
+  .reviews-wrapper {
+    justify-content: space-between;
+  }
 }
